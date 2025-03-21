@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Parking System</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Smart Parking System</h1>
+    <div class="total-slots" id="totalSlots">Total Available Slots: Loading...</div>
+    <div>
+      <p class="slot" id="slot1">Loading Slot 1 Status...</p>
+      <p class="slot" id="slot2">Loading Slot 2 Status...</p>
+    </div>
+    <button class="refresh-button" onclick="refreshStatus()">Refresh Status</button>
+    <div class="chart-container">
+      <canvas id="parkingChart"></canvas>
+    </div>
+    <div class="admin-login">
+      <h2>Admin Login</h2>
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="login()">Login</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
